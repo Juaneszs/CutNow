@@ -217,7 +217,7 @@ export default function MisCitas() {
       )}
 
       <header className="catalog-header">
-        <h1><span className="green-badge">Mis Citas</span></h1>
+        <h1><span className="header-logo">Mis Citas</span></h1>
         <p>Administra tus citas y revisa tu historial</p>
       </header>
 
