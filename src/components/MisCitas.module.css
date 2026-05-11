@@ -97,6 +97,15 @@
   font-weight: 600;
 }
 
+.badgeConfirmada {
+  background: rgba(99, 102, 241, 0.15);
+  color: #818cf8;
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
 .btnCancelarCita {
   margin-top: 16px;
   width: 100%;

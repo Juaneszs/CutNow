@@ -30,7 +30,7 @@ html, body, #root {
 }
 
 body {
-  background-image: url('/public/fondodark.png');
+  background-image: url('/fondobarb.png');
   background-repeat: repeat;
   background-attachment: fixed;
 

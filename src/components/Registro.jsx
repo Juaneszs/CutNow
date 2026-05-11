@@ -1,11 +1,13 @@
 
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 import { auth, db } from "../firebase";
 import "./Registro.css";
 
 function Register() {
+  const navigate = useNavigate();
  
   const [nombre, setNombre] = useState("");
   const [apellido, setApellido] = useState("");
@@ -61,9 +63,10 @@ function Register() {
         apellido,
         email,
         creadoEn: new Date().toISOString(),
+        role: "user",
       });
 
-      alert("¡Cuenta creada exitosamente!");
+      alert("¡Cuenta creada exitosamente!"); navigate("/catalogo");
 
     } catch (err) {
       

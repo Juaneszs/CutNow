@@ -148,7 +148,9 @@ export default function AgendarCitas() {
           fecha: fechaElegida,
           hora: horaElegida,
           estado: "pendiente",
-          valorada: false,
+          precio: servicioElegido.Precio || 0,
+          calificacion: null,
+          calificado: false,
           fecha_creacion: serverTimestamp(),
         });
 
