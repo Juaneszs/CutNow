@@ -1,0 +1,132 @@
+/* CONTENEDOR GENERAL */
+.checkout-container {
+  max-width: 720px;
+  margin: 80px auto;
+  padding: 0 20px;
+  color: #ffffff;
+}
+
+/* TÍTULO */
+.checkout-container h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* CARD BASE (MISMO ESTILO QUE AGENDAR / MIS CITAS) */
+.checkout-card {
+  background: rgba(16, 16, 16, 0.9);
+  border: 1px solid rgba(0, 214, 85, 0.25);
+  border-radius: 18px;
+  padding: 24px 26px;
+  margin-bottom: 24px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55);
+}
+
+/* TÍTULOS DE SECCIÓN */
+.checkout-card h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* PRODUCTOS */
+.checkout-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #e5e7eb;
+  margin-bottom: 10px;
+}
+
+.checkout-total {
+  margin-top: 18px;
+  text-align: right;
+  font-size: 16px;
+  font-weight: 600;
+  color: #00d655;
+}
+
+/* INPUTS */
+.checkout-card textarea,
+.checkout-card select {
+  width: 100%;
+  background: #0b0b0b;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 12px 14px;
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+}
+
+.checkout-card textarea {
+  resize: none;
+  min-height: 90px;
+}
+
+/* FOCUS VERDE */
+.checkout-card textarea:focus,
+.checkout-card select:focus {
+  border-color: #00d655;
+  box-shadow: 0 0 0 1px rgba(0, 214, 85, 0.5);
+}
+
+/* BOTÓN CONFIRMAR */
+.checkout-confirm-button {
+  width: 100%;
+  margin-top: 30px;
+  padding: 16px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #00d655, #00b34a);
+  color: #000000;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.checkout-confirm-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 214, 85, 0.4);
+}
+
+.checkout-confirm-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+/* ITEM DE PRODUCTO CON IMAGEN */
+.checkout-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.checkout-item-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.checkout-item-image {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  object-fit: cover;
+  background: #0b0b0b;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.checkout-item-name {
+  font-size: 14px;
+  color: #e5e7eb;
+}
+
+.checkout-item-price {
+  font-size: 14px;
+  font-weight: 600;
+  color: #00d655;
+}

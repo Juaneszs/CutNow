@@ -95,7 +95,7 @@ function showAuthAlert(navigate, destino) {
       <div style="font-size:44px;margin-bottom:12px;">✂️</div>
       <h2 style="color:#fff;margin:0 0 10px;font-size:20px;font-weight:600;">Acceso Restringido</h2>
       <p style="color:#9ca3af;margin:0 0 24px;font-size:14px;line-height:1.6;">
-        Debes iniciar sesión o registrarte para gestionar tus citas.
+        Debes iniciar sesión o registrarte para gestionar tu perfil.
       </p>
       <div style="display:flex;gap:12px;">
         <button id="al-login" style="flex:1;padding:12px;background:linear-gradient(135deg,#00c853,#00b34a);color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;">
