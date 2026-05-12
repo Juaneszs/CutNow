@@ -1,6 +1,6 @@
-/* src/components/Layout.css */
 
-/* --- HEADER --- */
+
+/*HEADER */
 .main-header {
   background-color: rgba(16, 16, 16, 0.95);
   backdrop-filter: blur(10px);
@@ -11,7 +11,7 @@
 }
 
 .header-container {
-  max-width: 1450px;
+  max-width: 1700px;
   margin: 0 auto;
   padding: 20px;
   display: flex;
@@ -48,13 +48,13 @@
   color: #fff;
 }
 
-/* ── BOTÓN DEL HEADER (Estilo Premium Ghost) ── */
+/*BOTÓN DEL HEADER*/
 .nav-btn-agendar {
   background-color: transparent; 
   color: #00d655; 
   border: 1px solid rgba(0, 214, 85, 0.5);
   text-decoration: none;
-  padding: 10px 22px; /* Un poco de padding extra para que se vea elegante */
+  padding: 10px 22px; 
   border-radius: 8px;
   font-size: 1.4rem;
   font-weight: 800;

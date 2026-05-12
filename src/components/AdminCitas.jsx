@@ -8,9 +8,7 @@ import { db } from "../firebase";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
-/* ──────────────────────────────────────────────────────────
-   Badge de estado
-────────────────────────────────────────────────────────── */
+/* Badge de estado*/
 function EstadoBadge({ estado }) {
   const map = {
     pendiente:  { label: "Pendiente",   bg: "rgba(251,191,36,0.15)",  color: "#fbbf24" },
@@ -29,9 +27,8 @@ function EstadoBadge({ estado }) {
   );
 }
 
-/* ──────────────────────────────────────────────────────────
-   Modal de confirmación antes de "Completar"
-────────────────────────────────────────────────────────── */
+/* confirmación antes de "Completar"
+ */
 function ModalCompletar({ cita, onConfirmar, onCancelar }) {
   return (
     <div style={{
@@ -82,9 +79,7 @@ function ModalCompletar({ cita, onConfirmar, onCancelar }) {
   );
 }
 
-/* ──────────────────────────────────────────────────────────
-   Tarjeta de cita (Admin)
-────────────────────────────────────────────────────────── */
+/*Tarjeta de cita (Admin)*/
 function CitaAdminCard({ cita, onAceptar, onCompletar, cargandoId }) {
   const ocupado = cargandoId === cita.id;
 
@@ -129,7 +124,7 @@ function CitaAdminCard({ cita, onAceptar, onCompletar, cargandoId }) {
       {fila("🏠 Sede", cita.sede_nombre || "—")}
       {fila("💵 Total", `$${(cita.precio || 0).toLocaleString("es-CO")}`, true)}
 
-      {/* Calificación si existe */}
+      {/* Calificación*/}
       {cita.calificacion && (
         <div style={{ marginTop: 12, padding: "10px 0 0", borderTop: "1px solid rgba(255,255,255,0.05)" }}>
           <p style={{ color: "#6b7280", fontSize: 12, margin: "0 0 4px" }}>Calificación del cliente:</p>
@@ -176,7 +171,7 @@ function CitaAdminCard({ cita, onAceptar, onCompletar, cargandoId }) {
               transition: "all .2s",
             }}
           >
-            {ocupado ? "Guardando..." : "✅ Completar"}
+            {ocupado ? "Guardando..." : "Completar"}
           </button>
         )}
       </div>

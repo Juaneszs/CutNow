@@ -30,9 +30,9 @@ const Footer = () => {
         <div className="footer-col">
           <h3 className="footer-title">Contáctanos</h3>
           <ul className="footer-contact">
-            <li>📍 Calle Principal 123, Ciudad</li>
+            <li>📍 Carrera 50AA #87-122, Medellin</li>
             <li>📞 +57 300 123 4567</li>
-            <li>✉️ contacto@cutnow.com</li>
+            <li>cutnow@gmail.com</li>
           </ul>
         </div>
       </div>
