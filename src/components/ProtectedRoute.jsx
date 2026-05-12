@@ -41,7 +41,7 @@ function showAlert(navigate) {
       <div style="font-size:48px;margin-bottom:16px;">✂️</div>
       <h2 style="color:#fff;margin:0 0 12px;font-size:22px;font-weight:600;">Acceso Restringido</h2>
       <p style="color:#9ca3af;margin:0 0 28px;font-size:15px;line-height:1.6;">
-        Debes iniciar sesión o registrarte para gestionar tus citas.
+        Debes iniciar sesión o registrarte para gestionar tu perfil.
       </p>
       <div style="display:flex;gap:12px;justify-content:center;">
         <button id="btn-login-alert" style="

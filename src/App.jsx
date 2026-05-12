@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
 
+import Checkout from './components/Checkout';
 import Login from './components/login';
 import Registro from './components/Registro';
 import RecuperarContrasena from './components/RecuperarContrasena';
@@ -26,6 +27,7 @@ function App() {
           <main style={{ flexGrow: 1, paddingBottom: '60px' }}>
             <Routes>
               {/* PÚBLICAS */}
+              <Route path="/checkout" element={<Checkout />} />
               <Route path="/" element={<Login />} />
               <Route path="/registro" element={<Registro />} />
               <Route path="/recuperar-contrasena" element={<RecuperarContrasena />} />
