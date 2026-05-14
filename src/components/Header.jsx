@@ -37,12 +37,12 @@ export default function Header() {
             <>
               <Link to="/mis-citas" className="nav-link">Mis Citas</Link>
               {isAdmin && (
-                <Link to="/admin" className="nav-link" style={{ color: "#facc15" }}>
+                <Link to="/admin" className="nav-link" style={{ color: "var(--accent)" }}>
                   ⚙ Admin
                 </Link>
               )}
               {isAdmin && (
-                <Link to="/admin/citas" className="nav-link" style={{ color: "#facc15" }}>
+                <Link to="/admin/citas" className="nav-link" style={{ color: "var(--accent)" }}>
                   📋 Citas
                 </Link>
               )}

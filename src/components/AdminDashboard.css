@@ -1,0 +1,214 @@
+/* --- src/components/AdminDashboard.css --- */
+
+/* Textos Globales */
+.text-green {
+  color: #00d655;
+}
+
+/* Pantalla de Carga */
+.admin-loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+.admin-loading-text {
+  color: #9ca3af;
+  font-size: 1.1rem;
+}
+
+.admin-empty-text {
+  color: #6b7280;
+  text-align: center;
+}
+
+/* Contenedor Principal */
+.admin-dashboard-container {
+  padding: 40px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header del Dashboard */
+.admin-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.admin-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+}
+
+.admin-subtitle {
+  color: #9ca3af;
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+/* Tarjeta Base (Reutilizable) */
+.admin-card {
+  background: rgba(20, 20, 20, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  padding: 24px;
+  backdrop-filter: blur(12px);
+}
+
+.admin-card-title {
+  margin: 0 0 20px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+}
+
+/* Cuadrícula de Estadísticas Superiores */
+.admin-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.admin-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.admin-stat-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.admin-stat-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-stat-label {
+  color: #9ca3af;
+  font-size: 13px;
+  margin: 0;
+}
+
+.admin-stat-value {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 700;
+  margin: 4px 0 2px;
+}
+
+.admin-stat-sub {
+  font-size: 13px;
+  margin: 0;
+}
+
+/* Fila de Gráficas */
+.admin-charts-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.admin-chart-svg {
+  width: 100%;
+  max-width: 360px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Tabla de Barberos */
+.admin-table-container {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  text-align: left;
+}
+
+.admin-table th {
+  color: #9ca3af;
+  font-weight: 500;
+  padding: 10px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.admin-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* Quita el borde inferior al último elemento de la tabla */
+.admin-table tr:last-child td {
+  border-bottom: none;
+}
+
+.td-barber {
+  color: #fff;
+  font-weight: 600;
+}
+
+.td-citas {
+  color: #d1d5db;
+}
+
+.td-ganancias {
+  color: #00d655;
+  font-weight: 600;
+}
+
+.medal {
+  margin-right: 6px;
+}
+
+/* Sistema de Estrellas */
+.star-rating-container {
+  display: flex;
+  align-items: center;
+}
+
+.star-icon {
+  font-size: 16px;
+}
+
+.star-text {
+  color: #9ca3af;
+  font-size: 13px;
+  margin-left: 6px;
+}
+
+.star-empty {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* --- RESPONSIVIDAD (Móviles) --- */
+@media (max-width: 768px) {
+  .admin-charts-row {
+    grid-template-columns: 1fr; /* Pone una gráfica debajo de la otra en celular */
+  }
+  
+  .admin-title {
+    font-size: 26px;
+  }
+  
+  .admin-dashboard-container {
+    padding: 20px 16px;
+  }
+}

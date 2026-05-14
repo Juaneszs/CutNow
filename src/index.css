@@ -33,6 +33,7 @@ body {
   background-image: url('/fondobarb.png');
   background-repeat: repeat;
   background-attachment: fixed;
+  background-size: cover;
 
   font-family: var(--sans);
   color: var(--text);
