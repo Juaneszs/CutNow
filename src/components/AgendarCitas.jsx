@@ -213,7 +213,7 @@ export default function AgendarCitas() {
 
         {/* TÍTULO */}
         <h1 className="agendar-titulo">
-          <span className="green-badge">Agendar Cita</span>
+          <span className="header-logo">Agendar Cita</span>
         </h1>
 
         {/*barra de progreso */}
