@@ -318,7 +318,7 @@ export default function AdminCitas() {
             const grupo = citasFiltradas.filter(c => c.estado === estado);
             if (grupo.length === 0) return null;
             
-            // Colores dinámicos para las líneas separadoras
+            // Colores para las líneas separadoras
             const sectionColor = estado === "pendiente" ? "#ffffff" : "#ffffff";
 
             return (
