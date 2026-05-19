@@ -328,7 +328,9 @@ export default function MisCitas() {
 
               {/* Acciones */}
               <div style={{ marginTop: 16, display: "flex", gap: 10, flexDirection: "column" }}>
-                {cita.estado === "pendiente" && (
+                
+                {/*incluye pendiente o confirmada */}
+                {(cita.estado === "pendiente" || cita.estado === "confirmada") && (
                   <button
                     className={styles.btnCancelarCita}
                     onClick={() => cancelarCita(cita)}
@@ -336,6 +338,7 @@ export default function MisCitas() {
                     Cancelar cita
                   </button>
                 )}
+
                 {cita.estado === "finalizada" && !cita.calificado && (
                   <button
                     onClick={() => setCitaAValorar(cita)}
