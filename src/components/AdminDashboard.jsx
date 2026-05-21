@@ -3,7 +3,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
-import "./AdminDashboard.css"; // <-- ¡Conectamos los estilos!
+import "./Styles/AdminDashboard.css";
 
 // --- Componentes Pequeños (Gráficas y Estrellas) ---
 

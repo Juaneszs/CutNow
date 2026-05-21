@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
-import "./Catalogo.css"; // <-- ¡Importante! Aquí conectamos el CSS
+import "./Styles/Catalogo.css";
 
 export default function Catalogo() {
   const navigate = useNavigate();

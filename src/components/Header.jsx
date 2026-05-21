@@ -2,7 +2,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase";
 import { useAuth } from "../context/AuthContext";
-import "./Layout.css";
+import "./Styles/Layout.css";
 
 export default function Header() {
   const { user, perfil, isAdmin } = useAuth();

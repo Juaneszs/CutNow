@@ -6,7 +6,8 @@ import {
 import { db, auth } from "../firebase";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import styles from "./MisCitas.module.css";
+import styles from "./Styles/MisCitas.module.css";
+
 
 // Sistema de valoración con estrellas
 function ValoracionModal({ cita, onCerrar }) {

@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import "./Checkout.css";
+import "./Styles/Checkout.css";
 
 export default function Checkout() {
   const navigate = useNavigate();

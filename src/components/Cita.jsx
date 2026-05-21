@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { addDoc, collection } from "firebase/firestore";
-import { db } from "../firebase"; //  CORREGIDO
+import { db } from "../firebase";
 import { auth } from "../firebase";
 
 export default function Cita() {

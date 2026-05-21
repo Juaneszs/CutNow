@@ -4,7 +4,7 @@ import { db } from "../firebase";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
-import './TiendaSection.css';
+import './Styles/TiendaSection.css';
 
 // --- Iconos SVG ---
 const CartIcon = ({ className = "" }) => (

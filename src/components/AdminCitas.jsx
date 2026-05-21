@@ -6,7 +6,7 @@ import {
 import { db } from "../firebase";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
-import "./AdminCitas.css";
+import "./Styles/AdminCitas.css";
 
 /* Badge de estado */
 function EstadoBadge({ estado }) {

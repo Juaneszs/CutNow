@@ -1,14 +1,14 @@
 // src/components/Footer.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Layout.css';
+import "./Styles/Layout.css";
 
 const Footer = () => {
   return (
     <footer className="main-footer">
       <div className="footer-container">
         
-        {/* Columna 1: Marca */}
+        {/* Marca */}
         <div className="footer-col">
           <h2 className="footer-logo">Cut<span className="text-green">Now</span></h2>
           <p className="footer-description">
@@ -16,7 +16,7 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Columna 2: Enlaces Rápidos */}
+        {/*Links router */}
         <div className="footer-col">
           <h3 className="footer-title">Explorar</h3>
           <ul className="footer-links">
@@ -26,18 +26,18 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Columna 3: Contacto */}
+        {/*Contacto */}
         <div className="footer-col">
           <h3 className="footer-title">Contáctanos</h3>
           <ul className="footer-contact">
             <li>📍 Carrera 50AA #87-122, Medellin</li>
-            <li>📞 +57 300 123 4567</li>
-            <li>cutnow@gmail.com</li>
+            <li>📞 +57 300 578 2087</li>
+            <li>✉️ cutnow@gmail.com</li>
           </ul>
         </div>
       </div>
       
-      {/* Copyright */}
+      {/* copyright */}
       <div className="footer-bottom">
         <p>&copy; {new Date().getFullYear()} CutNow. Todos los derechos reservados.</p>
       </div>

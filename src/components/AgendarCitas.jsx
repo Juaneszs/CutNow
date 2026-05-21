@@ -7,7 +7,7 @@ import {
   where, serverTimestamp, updateDoc
 } from "firebase/firestore";
 import { db, auth } from "../firebase";
-import "./AgendarCitas.css";
+import "./Styles/AgendarCitas.css";
 
 export default function AgendarCitas() {
   const navigate = useNavigate();
@@ -344,6 +344,7 @@ export default function AgendarCitas() {
               ["Barbero",  barberoElegido.Nombre],
               ["Fecha",    fechaElegida],
               ["Hora",     horaElegida],
+              ["Direccion", sedeElegida.Direccion],
             ].map(([label, valor]) => (
               <div key={label} className="agendar-resumen-fila">
                 <span className="resumen-label">{label}</span>
