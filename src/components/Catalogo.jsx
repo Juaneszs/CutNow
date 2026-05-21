@@ -1,5 +1,4 @@
-
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react"; // <-- Importamos useRef
 import { useNavigate } from "react-router-dom";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
@@ -9,6 +8,9 @@ export default function Catalogo() {
   const navigate = useNavigate();
   const [barberos, setBarberos] = useState([]);
   const [cargando, setCargando] = useState(true);
+  
+  // 1. Referencia para controlar el carrusel
+  const carruselRef = useRef(null);
 
   useEffect(() => {
     async function cargarBarberos() {
@@ -24,6 +26,21 @@ export default function Catalogo() {
     cargarBarberos();
   }, []);
 
+  // 2. Funciones para mover las flechas
+  const scrollIzquierda = () => {
+    if (carruselRef.current) {
+      // Movemos 320px hacia la izquierda (aprox. 1 tarjeta + espacio)
+      carruselRef.current.scrollBy({ left: -320, behavior: "smooth" });
+    }
+  };
+
+  const scrollDerecha = () => {
+    if (carruselRef.current) {
+      // Movemos 320px hacia la derecha
+      carruselRef.current.scrollBy({ left: 320, behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="catalog-container">
       
@@ -35,43 +52,64 @@ export default function Catalogo() {
         <p>Selecciona un barbero y agenda tu cita</p>
       </header>
 
-      {/* TARJETAS */}
-      <section className="card-grid">
-        {cargando && <p className="catalog-loading">Cargando la élite de barberos...</p>}
-
-        {!cargando && barberos.length === 0 && (
-          <p className="catalog-empty">No hay barberos registrados por el momento.</p>
+      {/* ── SECCIÓN CARRUSEL DE BARBEROS ── */}
+      <section className="carrusel-wrapper">
+        
+        {/* Flecha Izquierda (Solo se muestra si hay barberos y no está cargando) */}
+        {!cargando && barberos.length > 0 && (
+          <button className="carrusel-btn left" onClick={scrollIzquierda}>
+            &#10094;
+          </button>
         )}
 
-        {barberos.map(barbero => (
-          <div key={barbero.id} className="barber-card">
-            <div className="avatar-container">
-              <img
-                src={barbero.foto}
-                alt={barbero.Nombre}
-                className="barber-avatar-img"
-              />
+        {/* Pista Deslizable */}
+        <div className="carrusel-track" ref={carruselRef}>
+          
+          {cargando && <p className="catalog-loading" style={{ width: "100%", textAlign: "center" }}>Cargando la élite de barberos...</p>}
+
+          {!cargando && barberos.length === 0 && (
+            <p className="catalog-empty" style={{ width: "100%", textAlign: "center" }}>No hay barberos registrados por el momento.</p>
+          )}
+
+          {/* Tarjetas de Barberos */}
+          {barberos.map(barbero => (
+            <div key={barbero.id} className="barber-card">
+              <div className="avatar-container">
+                <img
+                  src={barbero.foto}
+                  alt={barbero.Nombre}
+                  className="barber-avatar-img"
+                />
+              </div>
+
+              <h3 className="barber-name">{barbero.Nombre}</h3>
+              <p className="barber-specialty">{barbero.especialidad || "Barbero profesional"}</p>
+
+              {/* BOTÓN VERDE */}
+              <button
+                className="btn-primary"
+                onClick={() =>
+                  navigate("/agendar", {
+                    state: { barberoSeleccionado: barbero }
+                  })
+                }
+              >
+                Agendar
+              </button>
             </div>
+          ))}
+        </div>
 
-            <h3 className="barber-name">{barbero.Nombre}</h3>
-            <p className="barber-specialty">{barbero.especialidad || "Barbero profesional"}</p>
+        {/* Flecha Derecha */}
+        {!cargando && barberos.length > 0 && (
+          <button className="carrusel-btn right" onClick={scrollDerecha}>
+            &#10095;
+          </button>
+        )}
 
-            {/* BOTÓN VERDE */}
-            <button
-              className="btn-primary"
-              onClick={() =>
-                navigate("/agendar", {
-                  state: { barberoSeleccionado: barbero }
-                })
-              }
-            >
-              Agendar
-            </button>
-          </div>
-        ))}
       </section>
 
-      {/* ── TARJETAS DE ACCIÓN INFERIORES ── */}
+      {/* ── TARJETAS DE ACCIÓN INFERIORES (Sin cambios) ── */}
       <section className="action-cards-container">
         
         {/* TARJETA 1: Mis Citas */}

@@ -1,11 +1,9 @@
-
-
 .catalog-container {
   padding: 40px 20px;
-  width: 100%; 
+  width: 100%;
   margin: 0 auto;
   text-align: center;
-  overflow-x: auto; 
+  overflow-x: auto;
 }
 
 .catalog-header {
@@ -27,28 +25,46 @@
   color: #00d655;
 }
 
-
-.card-grid {
+.carrusel-wrapper {
   display: flex;
-  flex-direction: row; 
-  flex-wrap: nowrap; 
-  justify-content: center; 
-  gap: 30px; 
-  margin-bottom: 60px;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
 }
 
-/* ── DISEÑO DE LA TARJETA ── */
+.carrusel-track {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: 10px 20px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.carrusel-track::-webkit-scrollbar {
+  display: none;
+}
+
 .barber-card {
-  background-color: rgba(20, 20, 20, 0.88);
+  flex: 0 0 auto;
+  width: 260px;
+  scroll-snap-align: center;
+  background: rgba(20, 20, 20, 0.88);
   border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
   border-radius: 16px;
   padding: 30px 20px;
-  width: 260px; 
-  flex-shrink: 0; 
+  text-align: center;
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .barber-card:hover {
@@ -56,7 +72,6 @@
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 214, 85, 0.1);
   border-color: rgba(0, 214, 85, 0.3);
 }
-
 
 .avatar-container {
   margin-bottom: 16px;
@@ -66,9 +81,9 @@
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  object-fit: cover; 
-  border: 2px solid #00d655; 
-  padding: 3px; 
+  object-fit: cover;
+  border: 2px solid #00d655;
+  padding: 3px;
   background-color: #111;
 }
 
@@ -85,7 +100,6 @@
   text-align: center;
 }
 
-/* ── BOTONES ── */
 .btn-primary {
   background-color: #00d655;
   color: #000;
@@ -96,14 +110,45 @@
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s ease;
-  width: 100%; 
+  width: 100%;
 }
 
 .btn-primary:hover {
   background-color: #00bf4c;
 }
 
-/* ── SECCIÓN DE BOTONES INFERIORES*/
+.carrusel-btn {
+  position: absolute;
+  z-index: 10;
+  background: rgba(0, 214, 85, 0.15);
+  color: #00d655;
+  border: 1px solid rgba(0, 214, 85, 0.4);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: all 0.2s;
+}
+
+.carrusel-btn:hover {
+  background: rgba(0, 214, 85, 0.4);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.carrusel-btn.left {
+  left: -20px;
+}
+
+.carrusel-btn.right {
+  right: -20px;
+}
+
 .action-cards-container {
   display: flex;
   justify-content: center;
@@ -113,7 +158,6 @@
   width: 100%;
 }
 
-/* ── DISEÑO DE CADA TARJETA ── */
 .action-card {
   background-color: rgba(20, 20, 20, 0.88);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -125,10 +169,9 @@
   flex-direction: column;
   justify-content: space-between;
   text-align: left;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* ── TARJETA CENTRAL  ── */
 .action-card.highlighted {
   border-color: rgba(0, 214, 85, 0.5);
   box-shadow: 0 10px 30px rgba(0, 214, 85, 0.05);
@@ -140,7 +183,6 @@
   margin-bottom: 24px;
 }
 
-/* ── ÍCONOS CIRCULARES ── */
 .action-icon {
   width: 50px;
   height: 50px;
@@ -149,7 +191,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0; 
+  flex-shrink: 0;
   color: #fff;
   transition: all 0.3s ease;
 }
@@ -159,14 +201,12 @@
   height: 24px;
 }
 
-
 .action-card.highlighted .action-icon {
   color: #00d655;
   border-color: rgba(0, 214, 85, 0.3);
   background-color: rgba(0, 214, 85, 0.05);
 }
 
-/* ── TEXTOS ── */
 .action-text h3 {
   color: #fff;
   font-size: 1.1rem;
@@ -185,7 +225,6 @@
   margin: 0;
 }
 
-
 .action-btn {
   display: flex;
   align-items: center;
@@ -201,7 +240,6 @@
   font-family: inherit;
 }
 
-
 .action-btn.outline {
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -214,20 +252,23 @@
   background-color: rgba(255, 255, 255, 0.05);
 }
 
-
-
 .action-btn.solid {
-  background-color: transparent; 
-  border: 1px solid rgba(0, 214, 85, 0.5); 
-  color: #00d655; 
+  background-color: transparent;
+  border: 1px solid rgba(0, 214, 85, 0.5);
+  color: #00d655;
   font-weight: 600;
 }
 
-
 .action-btn.solid:hover {
-  background-color: #00d655; 
+  background-color: #00d655;
   border-color: #00d655;
-  color: #000; 
-  transform: translateY(-2px); 
-  box-shadow: 0 8px 20px rgba(0, 214, 85, 0.25); 
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 214, 85, 0.25);
+}
+
+@media (max-width: 768px) {
+  .carrusel-btn {
+    display: none;
+  }
 }
