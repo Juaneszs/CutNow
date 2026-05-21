@@ -15,8 +15,8 @@ html, body, #root {
   display: flex;          
   flex-direction: row;   
   
-  /* ── 1. AGREGAMOS EL FONDO CON TEXTURA ── */
-  background-image: url('../assets/fondobarb.png'); /* Ajusta la ruta a donde tengas la imagen */
+  
+  background-image: url('./fondobarb.png'); 
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -61,7 +61,7 @@ html, body, #root {
 }
 
 .register-card {
-  /* ── 2. EFECTO CRISTAL (Glassmorphism) IGUAL AL ADMIN ── */
+  
   background: rgba(20, 20, 20, 0.88); 
   border: 1px solid rgba(255, 255, 255, 0.07);
   backdrop-filter: blur(12px); 
@@ -71,7 +71,7 @@ html, body, #root {
   width: 100%;
   max-width: 480px;
   color: white;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6); /* Sombra para que flote */
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6); 
 }
 
 .register-card h2 {

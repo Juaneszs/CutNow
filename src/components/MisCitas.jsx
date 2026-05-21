@@ -9,7 +9,7 @@ import { useAuth } from "../context/AuthContext";
 import styles from "./Styles/MisCitas.module.css";
 
 
-// Sistema de valoración con estrellas
+// Scalificacion con estrellas y comentario
 function ValoracionModal({ cita, onCerrar }) {
   const [estrellas, setEstrellas] = useState(0);
   const [hover, setHover] = useState(0);
@@ -48,7 +48,7 @@ function ValoracionModal({ cita, onCerrar }) {
         comentario: comentario.trim(),
         calificado: true,
       });
-      // Recalcular promedio del barbero tras nueva calificación
+      // calcular promedio del barbero
       if (cita.barbero_id) {
         await recalcularPromedioBarbero(cita.barbero_id);
       }

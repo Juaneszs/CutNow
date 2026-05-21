@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function RecuperarContrasena() {
   const [email, setEmail] = useState("");
-  const [estado, setEstado] = useState("idle"); // idle | enviando | enviado | error
+  const [estado, setEstado] = useState("idle");
   const [error, setError] = useState("");
 
   const handleEnviar = async () => {

@@ -15,31 +15,31 @@ export default function Checkout() {
 
   function confirmarCompra() {
     if (metodoPago === "transferencia") {
-      // 1. Armamos el mensaje para WhatsApp
+      // mensaje para whatsapp
       let mensaje = "💈 *Hola, quiero confirmar mi pedido de la tienda:*\n\n";
       
       carrito.forEach(p => {
-        // Usamos toLocaleString("es-CO") para que los precios se vean bien formateados
+
         mensaje += `▪️ ${p.nombre} - $${p.precio.toLocaleString("es-CO")}\n`;
       });
 
       mensaje += `\n *Total a transferir: $${total.toLocaleString("es-CO")}*`;
       mensaje += "\n\nQuedo atento a los datos para realizar la transferencia.";
 
-      // 2. Número de la barbería (Asegúrate de dejar el 57 al inicio)
+      // 2. Número  de whatsapp
       const numeroWhatsApp = "573005782087"; // Tu número real
       
       // 3. Creamos el enlace oficial de WhatsApp
       const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
       
-      // 4. Abrimos WhatsApp en una pestaña nueva
+      // 4. Abrir WhatsApp en una pestaña nueva
       window.open(url, "_blank");
 
       // 5. Redirigir al usuario al inicio después de enviarlo a WhatsApp
       navigate("/");
 
     } else {
-      // Lógica para cuando eligen efectivo en el local
+      // Lógica para pago en efectivo
       alert("¡Pedido reservado! Págalo en efectivo al reclamarlo en la barbería.");
       navigate("/");
     }

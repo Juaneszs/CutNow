@@ -1,4 +1,4 @@
-// src/components/Catalogo.jsx
+
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { collection, getDocs } from "firebase/firestore";
@@ -35,7 +35,7 @@ export default function Catalogo() {
         <p>Selecciona un barbero y agenda tu cita</p>
       </header>
 
-      {/* TARJETAS (Ahora controladas por Flexbox en CSS) */}
+      {/* TARJETAS */}
       <section className="card-grid">
         {cargando && <p className="catalog-loading">Cargando la élite de barberos...</p>}
 
@@ -49,7 +49,7 @@ export default function Catalogo() {
               <img
                 src={barbero.foto}
                 alt={barbero.Nombre}
-                className="barber-avatar-img" /* <-- Clase nueva para el CSS */
+                className="barber-avatar-img"
               />
             </div>
 

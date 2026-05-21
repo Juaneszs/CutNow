@@ -35,7 +35,7 @@ function Register() {
     if (password !== confirmar) {
       return "Las contraseñas no coinciden.";
     }
-    return null; // null = sin errores
+    return null;
   };
 
   const handleRegistro = async () => {

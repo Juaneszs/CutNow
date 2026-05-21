@@ -16,7 +16,7 @@ const guardarCita = async () => {
   const user = auth.currentUser;
 
   await addDoc(collection(db, "citas"), {
-    barbero: "Próximamente", // luego será dinámico
+    barbero: "Próximamente",
     fecha,
     hora,
     estado: "pendiente",

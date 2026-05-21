@@ -1,6 +1,4 @@
-/* --- src/components/AdminDashboard.css --- */
 
-/* Textos Globales */
 .text-green {
   color: #00d655;
 }
@@ -49,7 +47,7 @@
   line-height: 1.5;
 }
 
-/* Tarjeta Base (Reutilizable) */
+/* Tarjeta Base */
 .admin-card {
   background: rgba(20, 20, 20, 0.88);
   border: 1px solid rgba(255, 255, 255, 0.07);
@@ -115,7 +113,7 @@
   margin: 0;
 }
 
-/* Fila de Gráficas */
+
 .admin-charts-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -130,7 +128,7 @@
   margin: 0 auto;
 }
 
-/* Tabla de Barberos */
+
 .admin-table-container {
   overflow-x: auto;
 }
@@ -154,7 +152,7 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.04);
 }
 
-/* Quita el borde inferior al último elemento de la tabla */
+
 .admin-table tr:last-child td {
   border-bottom: none;
 }
@@ -177,7 +175,7 @@
   margin-right: 6px;
 }
 
-/* Sistema de Estrellas */
+
 .star-rating-container {
   display: flex;
   align-items: center;
@@ -198,7 +196,7 @@
   font-size: 13px;
 }
 
-/* --- RESPONSIVIDAD (Móviles) --- */
+
 @media (max-width: 768px) {
   .admin-charts-row {
     grid-template-columns: 1fr; /* Pone una gráfica debajo de la otra en celular */

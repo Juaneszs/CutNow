@@ -9,7 +9,7 @@ export default function ProtectedRoute({ children, adminOnly = false }) {
   useEffect(() => {
     if (cargando) return;
     if (!user) {
-      // Disparar alert nativa estilizada y redirigir
+      
       showAlert(navigate);
     } else if (adminOnly && !isAdmin) {
       navigate("/catalogo");
@@ -24,7 +24,7 @@ export default function ProtectedRoute({ children, adminOnly = false }) {
 }
 
 function showAlert(navigate) {
-  // Crear el modal de alerta personalizado
+  
   const overlay = document.createElement("div");
   overlay.style.cssText = `
     position:fixed;inset:0;z-index:9999;

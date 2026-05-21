@@ -1,11 +1,11 @@
-/* src/components/Catalogo.css */
+
 
 .catalog-container {
   padding: 40px 20px;
-  width: 100%; /* Permite que el contenedor se expanda para acomodar todas las tarjetas */
+  width: 100%; 
   margin: 0 auto;
   text-align: center;
-  overflow-x: auto; /* Permite desplazamiento horizontal si las tarjetas no caben */
+  overflow-x: auto; 
 }
 
 .catalog-header {
@@ -27,13 +27,13 @@
   color: #00d655;
 }
 
-/* ── LA MAGIA DE FLEXBOX PARA CENTRAR LAS TARJETAS ── */
+
 .card-grid {
   display: flex;
-  flex-direction: row; /* Asegura que las tarjetas estén en fila horizontal */
-  flex-wrap: nowrap; /* pa que no bajen */
-  justify-content: center; /* Centra las tarjetas horizontalmente */
-  gap: 30px; /* Espacio entre tarjetas */
+  flex-direction: row; 
+  flex-wrap: nowrap; 
+  justify-content: center; 
+  gap: 30px; 
   margin-bottom: 60px;
 }
 
@@ -43,8 +43,8 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   padding: 30px 20px;
-  width: 260px; /* Ancho fijo para que todas se vean iguales */
-  flex-shrink: 0; /* Evita que las tarjetas se encojan y causen wrapping */
+  width: 260px; 
+  flex-shrink: 0; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,7 +57,7 @@
   border-color: rgba(0, 214, 85, 0.3);
 }
 
-/* ── ESTILOS DE LA IMAGEN (Antes estaban en el JSX) ── */
+
 .avatar-container {
   margin-bottom: 16px;
 }
@@ -66,9 +66,9 @@
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  object-fit: cover; /* Evita que la foto se deforme si no es cuadrada */
-  border: 2px solid #00d655; /* Un toque verde para resaltar */
-  padding: 3px; /* Espacio entre la foto y el borde */
+  object-fit: cover; 
+  border: 2px solid #00d655; 
+  padding: 3px; 
   background-color: #111;
 }
 
@@ -96,15 +96,14 @@
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s ease;
-  width: 100%; /* El botón ocupa el ancho de la tarjeta */
+  width: 100%; 
 }
 
 .btn-primary:hover {
   background-color: #00bf4c;
 }
 
-/* ── SECCIÓN DE BOTONES INFERIORES (Antes en línea) ── */
-/* ── CONTENEDOR DE TARJETAS DE ACCIÓN ── */
+/* ── SECCIÓN DE BOTONES INFERIORES*/
 .action-cards-container {
   display: flex;
   justify-content: center;
@@ -129,7 +128,7 @@
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-/* ── TARJETA CENTRAL (DESTACADA EN VERDE) ── */
+/* ── TARJETA CENTRAL  ── */
 .action-card.highlighted {
   border-color: rgba(0, 214, 85, 0.5);
   box-shadow: 0 10px 30px rgba(0, 214, 85, 0.05);
@@ -150,7 +149,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0; /* Evita que el círculo se deforme */
+  flex-shrink: 0; 
   color: #fff;
   transition: all 0.3s ease;
 }
@@ -160,7 +159,7 @@
   height: 24px;
 }
 
-/* El ícono de la tarjeta destacada hereda el color verde */
+
 .action-card.highlighted .action-icon {
   color: #00d655;
   border-color: rgba(0, 214, 85, 0.3);
@@ -186,7 +185,7 @@
   margin: 0;
 }
 
-/* ── BOTONES DE LAS TARJETAS ── */
+
 .action-btn {
   display: flex;
   align-items: center;
@@ -202,7 +201,7 @@
   font-family: inherit;
 }
 
-/* Botones secundarios (Laterales) */
+
 .action-btn.outline {
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -215,8 +214,8 @@
   background-color: rgba(255, 255, 255, 0.05);
 }
 
-/* ── EL BOTÓN MÁGICO CENTRAL ── */
-/* Estado normal: Transparente con letras y borde verde sutil */
+
+
 .action-btn.solid {
   background-color: transparent; 
   border: 1px solid rgba(0, 214, 85, 0.5); 
@@ -224,11 +223,11 @@
   font-weight: 600;
 }
 
-/* Estado Hover (Al pasar el mouse): Se rellena de verde intenso */
+
 .action-btn.solid:hover {
   background-color: #00d655; 
   border-color: #00d655;
-  color: #000; /* Las letras pasan a negro para leerse perfectamente */
-  transform: translateY(-2px); /* Un pequeño salto hacia arriba */
-  box-shadow: 0 8px 20px rgba(0, 214, 85, 0.25); /* Un resplandor verde muy premium */
+  color: #000; 
+  transform: translateY(-2px); 
+  box-shadow: 0 8px 20px rgba(0, 214, 85, 0.25); 
 }

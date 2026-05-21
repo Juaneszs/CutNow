@@ -1,5 +1,3 @@
-/* src/components/AgendarCitas.css */
-
 .agendar-pagina {
   min-height: 100vh;
   display: flex;
@@ -24,7 +22,7 @@
   font-size: 36px;
 }
 
-/* ── Barra de progreso ── */
+
 .agendar-progreso {
   display: flex;
   justify-content: center;
@@ -54,7 +52,7 @@
   box-shadow: 0 0 10px rgba(0, 200, 83, 0.5);
 }
 
-/* ── Error ── */
+
 .agendar-error {
   background: rgba(239, 68, 68, 0.12);
   border: 1px solid rgba(239, 68, 68, 0.4);
@@ -65,7 +63,7 @@
   font-size: 14px;
 }
 
-/* ── Grupos de campos ── */
+
 .agendar-grupo {
   margin-bottom: 28px;
 }
@@ -125,7 +123,7 @@
   border-color: #444;
 }
 
-/* ── Resumen ── */
+
 .agendar-resumen {
   background: #111;
   border: 1px solid #1f1f1f;
@@ -201,7 +199,7 @@
   box-shadow: 0 12px 28px rgba(0, 200, 83, 0.45);
 }
 
-/* ── Pantalla cargando ── */
+
 .agendar-cargando {
   min-height: 100vh;
   display: flex;
@@ -212,7 +210,7 @@
   background: #000;
 }
 
-/* ── Pantalla de éxito ── */
+
 .exito-wrap {
   min-height: 100vh;
   background: #000;

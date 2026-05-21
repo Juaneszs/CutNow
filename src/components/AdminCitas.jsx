@@ -8,7 +8,7 @@ import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import "./Styles/AdminCitas.css";
 
-/* Badge de estado */
+/* estado */
 function EstadoBadge({ estado }) {
   const labels = {
     pendiente: "Pendiente",
@@ -17,7 +17,7 @@ function EstadoBadge({ estado }) {
     cancelada: "Cancelada"
   };
   
-  // Usamos clases dinámicas en lugar de estilos en línea
+
   return (
     <span className={`badge badge-${estado}`}>
       {labels[estado] || "Pendiente"}
@@ -25,7 +25,7 @@ function EstadoBadge({ estado }) {
   );
 }
 
-/* Modal confirmación antes de "Completar" */
+/*confirmación antes de Completar */
 function ModalCompletar({ cita, onConfirmar, onCancelar }) {
   return (
     <div className="modal-overlay">
@@ -82,7 +82,7 @@ function CitaAdminCard({ cita, onAceptar, onCompletar, onCancelar, cargandoId })
       {fila("🏠 Sede", cita.sede_nombre || "—")}
       {fila("💵 Total", `$${(cita.precio || 0).toLocaleString("es-CO")}`, true)}
 
-      {/* Calificación (Si la hay en historial) */}
+      {/* Calificación */}
       {cita.calificacion && (
         <div className="rating-container">
           <p className="rating-title">Calificación del cliente:</p>
@@ -126,9 +126,7 @@ function CitaAdminCard({ cita, onAceptar, onCompletar, onCancelar, cargandoId })
   );
 }
 
-/* ──────────────────────────────────────────────────────────
-   Componente principal
-────────────────────────────────────────────────────────── */
+
 export default function AdminCitas() {
   const { user, isAdmin, cargando: authCargando } = useAuth();
   const navigate = useNavigate();
@@ -242,7 +240,7 @@ export default function AdminCitas() {
   const finalizadas = historial.length;
   const ingresoHoy = historial.filter(c => c.fecha === new Date().toISOString().split("T")[0]).reduce((s, c) => s + (Number(c.precio) || 0), 0);
 
-  // Colores dinámicos para los iconos del resumen
+  // Colores para los iconos del resumen
   const summaryColors = { pendientes: "#fbbf24", confirmadas: "#818cf8", finalizadas: "#00c853", ingresos: "#00c853" };
 
   if (authCargando || (cargando && isAdmin)) {

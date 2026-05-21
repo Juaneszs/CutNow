@@ -5,7 +5,7 @@ import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import "./Styles/AdminDashboard.css";
 
-// --- Componentes Pequeños (Gráficas y Estrellas) ---
+// --- Componentes Pequeños ---
 
 function BarChart({ data }) {
   if (!data || data.length === 0) return <p className="admin-empty-text">Sin datos</p>;
@@ -209,7 +209,7 @@ export default function AdminDashboard() {
 
   if (!stats) return null;
 
-  // Tarjeta de estadística reutilizable (Mantiene solo los colores dinámicos inline)
+  // Tarjeta de estadística
   const statCard = (icon, label, value, sub, color = "#00d655") => (
     <div className="admin-card admin-stat-card">
       <div className="admin-stat-icon" style={{ background: `${color}22` }}>
